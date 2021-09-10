@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <header></header>
+    <div class="workspace">
+        <div class="list">
+            <h3>To do</h3>
+        </div>
+        <div class="list">
+            <h3>In progress</h3>
+        </div>
+        <div class="list">
+            <h3>Done</h3>
+        </div>
+    </div>
+    <div class="plus" onclick="showPrompt();">
+        <span>+</span>
+    </div>
+
+    <template id="card-template">
+        <div class="card">
+            <h3></h3>
+            <p></p>
+        </div>
+
+    </template>
+    <div id="prompt" >
+        <label for="title">Title</label><br>
+        <input name="title" type="text"><br>
+        <label for="description">Description</label><br>
+        <textarea name="description" ></textarea><br>
+        <button onclick="hidePrompt();createCard();">OK</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

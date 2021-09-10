@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height: 100px;
+    flex-grow: 0;
+}
+textarea{
+    resize: none;
+}
+.workspace{
+    flex-grow: 1;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+}
+
+.list{
+    flex-grow: 1;
+    background-color: rgb(230, 220, 220);
+    margin: 5px;
+    border-radius: 20px;
+    text-align: center;
+    color: red;
+}
+
+.plus{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:rgb(235, 217, 217);
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.plus:hover{
+    background: rgb(233, 182, 182);
+}
+.plus span{
+    background-image: radial-gradient( rgb(243, 32, 32), white);
+    background-clip: text;
+    color: transparent;
+}
+
+.card{
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: start;
+    color: rgb(59, 19, 19);
+    cursor: grab;
+}
+
+
+#prompt{
+    display: none;
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    border: 1px solid red;
+    box-shadow: 10px 5px 5px grey;
+    background-color: white;
+    padding: 20px;
+
+    flex-direction: column;
+}
+
+#prompt>input,textarea{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#prompt>textarea{
+    flex-grow: 1;
+}
+#prompt>button{
+    align-self: flex-end;
+    width: 50px;
+    cursor: pointer;
+}
+
