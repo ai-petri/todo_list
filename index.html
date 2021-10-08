@@ -10,14 +10,17 @@
 <body>
     <header></header>
     <div class="workspace">
-        <div class="list">
+        <div class="list-container">
             <h3>To do</h3>
+            <div class="list"></div>
         </div>
-        <div class="list">
+        <div class="list-container">
             <h3>In progress</h3>
+            <div class="list"></div>
         </div>
-        <div class="list">
+        <div class="list-container">
             <h3>Done</h3>
+            <div class="list"></div>
         </div>
     </div>
     <div class="plus" onclick="showPrompt();">
@@ -26,8 +29,8 @@
 
     <template id="card-template">
         <div class="card">
-            <h3></h3>
-            <p></p>
+            <h3 class="title"></h3>
+            <p class="description"></p>
         </div>
 
     </template>
@@ -36,7 +39,7 @@
         <input name="title" type="text"><br>
         <label for="description">Description</label><br>
         <textarea name="description" ></textarea><br>
-        <button onclick="hidePrompt();createCard();">OK</button>
+        <button onclick="ok()">OK</button>
     </div>
     <script src="main.js"></script>
 </body>
